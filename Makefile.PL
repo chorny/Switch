@@ -4,7 +4,7 @@ WriteMakefile1(
     MIN_PERL_VERSION => '5.005',
     META_MERGE => {
         resources => {
-            repository => 'git://github.com/chorny/Switch.git',
+            repository => 'http://github.com/chorny/Switch',
         },
     },
     #BUILD_REQUIRES => {
