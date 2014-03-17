@@ -1,5 +1,6 @@
 package Switch;
 
+use 5.005;
 use strict;
 use vars qw($VERSION);
 use Carp;
