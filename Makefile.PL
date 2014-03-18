@@ -12,7 +12,7 @@ WriteMakefile1(
 
     NAME => q[Switch],
     VERSION_FROM => q[Switch.pm],
-    PREREQ_PM => { 'Filter::Util::Call' => 0, 'Text::Balanced' => 0 },
+    PREREQ_PM => { 'Filter::Util::Call' => 0, 'Text::Balanced' => 2 },
     INSTALLDIRS => ($] >= 5.00703 && $] < 5.011) ? 'perl' : 'site',
 );
 
