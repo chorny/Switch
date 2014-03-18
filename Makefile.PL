@@ -12,6 +12,8 @@ WriteMakefile1(
 
     NAME => q[Switch],
     VERSION_FROM => q[Switch.pm],
+    ABSTRACT_FROM =>  => q[Switch.pm],
+    AUTHOR => ['Damian Conway', 'Rafael Garcia-Suarez', 'Alexandr Ciornii'],
     PREREQ_PM => { 'Filter::Util::Call' => 0, 'Text::Balanced' => 2, 'if' => 0, },
     INSTALLDIRS => ($] >= 5.00703 && $] < 5.011) ? 'perl' : 'site',
     $^O =~/win/i ? (
