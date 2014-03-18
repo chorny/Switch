@@ -507,7 +507,7 @@ __END__
 
 =head1 NAME
 
-Switch - A switch statement for Perl
+Switch - A switch statement for Perl, do not use if you can use given/when
 
 =head1 SYNOPSIS
 
@@ -851,6 +851,13 @@ Porters (perl5-porters@perl.org), as part of the Perl core.
 There are undoubtedly serious bugs lurking somewhere in code this funky :-)
 Bug reports and other feedback are most welcome.
 
+May create syntax errors in other parts of code.
+
+On perl 5.10.x may cause syntax error if "case" is present inside heredoc.
+
+In general, use given/when instead. It were introduced in perl 5.10.0.
+Perl 5.10.0 was released in 2007.
+
 =head1 LIMITATIONS
 
 Due to the heuristic nature of Switch.pm's source parsing, the presence of
@@ -863,6 +870,10 @@ errors. The workaround is to use C<m?...?> instead.
 
 Due to the way source filters work in Perl, you can't use Switch inside
 an string C<eval>.
+
+May not work if sub prototypes are used (RT#33988).
+
+Regex captures in when are not available to code.
 
 If your source file is longer then 1 million characters and you have a
 switch statement that crosses the 1 million (or 2 million, etc.)
