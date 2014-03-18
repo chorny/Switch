@@ -14,6 +14,12 @@ WriteMakefile1(
     VERSION_FROM => q[Switch.pm],
     PREREQ_PM => { 'Filter::Util::Call' => 0, 'Text::Balanced' => 2, 'if' => 0, },
     INSTALLDIRS => ($] >= 5.00703 && $] < 5.011) ? 'perl' : 'site',
+    $^O =~/win/i ? (
+        dist => {
+            TAR      => 'ptar',
+            TARFLAGS => '-c -C -f',
+        },
+    ) : (),
 );
 
 sub WriteMakefile1 {  #Compatibility code for old versions of EU::MM. Written by Alexandr Ciornii, version 0.23. Added by eumm-upgrade.
