@@ -7,7 +7,7 @@ use Carp;
 
 use if $] >= 5.011, 'deprecate';
 
-$VERSION = '2.16';
+$VERSION = '2.17';
   
 
 # LOAD FILTERING MODULE...
@@ -842,9 +842,9 @@ and requires both these modules to be installed.
 
 =head1 AUTHOR
 
-Damian Conway (damian@conway.org). This module is now maintained by Rafael
-Garcia-Suarez (rgarciasuarez@gmail.com) and more generally by the Perl 5
-Porters (perl5-porters@perl.org), as part of the Perl core.
+Damian Conway (damian@conway.org). This module is now maintained by
+Alexandr Ciornii (alexchorny@gmail.com). Previously was maintained by
+Rafael Garcia-Suarez and perl5 porters.
 
 =head1 BUGS
 
@@ -885,3 +885,4 @@ use smaller source files.
     Copyright (c) 1997-2008, Damian Conway. All Rights Reserved.
     This module is free software. It may be used, redistributed
         and/or modified under the same terms as Perl itself.
+
