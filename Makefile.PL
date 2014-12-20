@@ -1,3 +1,13 @@
+
+use strict;
+my $filter_util_call_v = 0;
+eval {
+    require Filter::Util::Call;
+    if ($Filter::Util::Call::VERSION eq '1.50' || $Filter::Util::Call::VERSION eq '1.51') {
+        #these versions have problems with Switch
+        $filter_util_call_v = 1.53;
+    }
+};
 use ExtUtils::MakeMaker;
 WriteMakefile1(
     LICENSE => 'perl',
@@ -14,7 +24,7 @@ WriteMakefile1(
     VERSION_FROM => q[Switch.pm],
     ABSTRACT_FROM =>  => q[Switch.pm],
     AUTHOR => ['Damian Conway', 'Rafael Garcia-Suarez', 'Alexandr Ciornii'],
-    PREREQ_PM => { 'Filter::Util::Call' => 0, 'Text::Balanced' => 2, 'if' => 0, },
+    PREREQ_PM => { 'Filter::Util::Call' => $filter_util_call_v, 'Text::Balanced' => 2, 'if' => 0, },
     INSTALLDIRS => ($] >= 5.00703 && $] < 5.011) ? 'perl' : 'site',
     $^O =~/win/i ? (
         dist => {

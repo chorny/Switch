@@ -124,3 +124,6 @@ Revision history for Perl extension Switch.
         - patch by Father Chrysostomos
         - many warnings
         - recommendation to use given/when
+
+2.18 2014-12-
+        - some versions of Filter::Util::Call have problems
