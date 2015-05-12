@@ -507,7 +507,7 @@ __END__
 
 =head1 NAME
 
-Switch - A switch statement for Perl, do not use if you can use given/when
+Switch - A switch statement for Perl, do not use if you can use given/when. Also see Switch::Plain.
 
 =head1 SYNOPSIS
 
