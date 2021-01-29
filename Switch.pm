@@ -5,8 +5,6 @@ use strict;
 use vars qw($VERSION);
 use Carp;
 
-use if $] >= 5.011, 'deprecate';
-
 $VERSION = '2.17';
   
 
