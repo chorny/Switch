@@ -878,6 +878,8 @@ May not work if sub prototypes are used (RT#33988).
 
 Regex captures in when are not available to code.
 
+Due to limitation of Filter::Util::Call (RT#101033), __DATA__ does not work.
+
 If your source file is longer then 1 million characters and you have a
 switch statement that crosses the 1 million (or 2 million, etc.)
 character boundary you will get mysterious errors. The workaround is to
