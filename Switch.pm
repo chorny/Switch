@@ -525,6 +525,11 @@ Switch - A switch statement for Perl, do not use if you can use given/when. Also
 	else		{ print "previous case not true" }
     }
 
+=head1 CAVEATS
+
+This module has not been deprecated.  It can be used by someone who knows its
+limitations.  However, in general, its use should be discouraged.
+
 =head1 BACKGROUND
 
 [Skip ahead to L<"DESCRIPTION"> if you don't care about the whys

@@ -127,3 +127,6 @@ Revision history for Perl extension Switch.
 
 2.18 2014-12-
         - some versions of Filter::Util::Call have problems
+
+2.19 YYYY-MM-DD
+        -  Add a prominent CAVEATS section to docs.
